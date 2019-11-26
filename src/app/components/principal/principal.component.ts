@@ -44,4 +44,9 @@ export class PrincipalComponent implements OnInit {
     )
   }
 
+  public CambiarStatus(thing){
+    thing.complete=!thing.complete;
+    console.log(thing.complete);
+  }
+
 }

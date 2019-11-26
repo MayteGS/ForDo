@@ -28,7 +28,7 @@
                             <td scope="row">{{thing.thing}}</td>
                             <td>{{thing.created_date|date:'dd/MM/yyyy'}}</td>
                             <td>
-                                <button type="button" class="btn" [ngClass]="{'btn-outline-success': thing.complete, 'btn-outline-danger': !thing.complete}">
+                                <button type="button" class="btn" [ngClass]="{'btn-outline-success': thing.complete, 'btn-outline-danger': !thing.complete}" (click)="CambiarStatus(thing)">
 
                                     <span *ngIf="!thing.complete">Finalizar Tarea</span>
                                     <span *ngIf="thing.complete">Tarea Finalizada</span>
