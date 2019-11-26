@@ -31,5 +31,12 @@ export class ForDoService {
 
     let url= `${this.UrlGlobal}/v1/things/${thing._id}`
     
+    return this.http.put(url,thing);
+  }
+
+  public deleteThing(ThingId){
+    let url= `${this.UrlGlobal}/v1/things/${ThingId}`
+
+    return this.http.delete(url);
   }
 }

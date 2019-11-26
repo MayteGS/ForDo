@@ -29,11 +29,11 @@
                             <td>{{thing.created_date|date:'dd/MM/yyyy'}}</td>
                             <td>
                                 <button type="button" class="btn" [ngClass]="{'btn-outline-success': thing.complete, 'btn-outline-danger': !thing.complete}" (click)="CambiarStatus(thing)">
-
                                     <span *ngIf="!thing.complete">Finalizar Tarea</span>
                                     <span *ngIf="thing.complete">Tarea Finalizada</span>
-                                    
                                 </button>
+
+                                <button type="button" (click)="EliminarTarea(thing._id)" class="btn btn-outline-secondary ml-2">¿Eliminar Tarea?</button>
                             </td>
                         </tr>
                     </tbody>
